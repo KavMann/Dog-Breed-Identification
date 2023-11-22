@@ -37,6 +37,7 @@ def index():
     breed_info = None
     image_path = None
     breed_needs = None
+    image_filename = None
 
     if request.method == "POST":
         # Check if a file was uploaded
