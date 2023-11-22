@@ -8,7 +8,7 @@ import pandas as pd
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 app = Flask(__name__)
 
@@ -36,6 +36,7 @@ def index():
     predicted_breed = None
     breed_info = None
     image_path = None
+    breed_needs = None
 
     if request.method == "POST":
         # Check if a file was uploaded
@@ -47,8 +48,9 @@ def index():
         if file.filename == "":
             return redirect(request.url)
 
-        # Save the uploaded file temporarily
-        image_path = "uploaded_image.jpg"
+        # Save the uploaded file in the static folder
+        image_filename = "uploaded_image.jpg"
+        image_path = os.path.join('static', image_filename)
         file.save(image_path)
 
         # Predict the breed
@@ -57,7 +59,10 @@ def index():
 
         # Get breed information from ChatGPT
         breed_info = get_breed_characteristics(predicted_breed)
-    return render_template("index.html", predicted_breed=predicted_breed, breed_info=breed_info, image_path=image_path)
+
+        # Get breed needs from ChatGPT
+        breed_needs = get_breed_needs(predicted_breed)
+    return render_template("index.html", predicted_breed=predicted_breed, breed_info=breed_info, breed_needs=breed_needs, image_path=image_filename)
 
 def predict_breed(image_path):
     img_array = cv2.resize(cv2.imread(image_path, cv2.IMREAD_COLOR), (224, 224))
@@ -82,7 +87,7 @@ def get_breed_characteristics(breed):
 
 def get_breed_needs(breed):
     # Define the prompt for basic needs
-    prompt2 = f"What are the basic needs of the {breed} dog breed?"
+    prompt2 = f"Needs of a {breed} I should know about before adopting one?"
 
     # Call the OpenAI API to get a response
     response = openai.Completion.create(
