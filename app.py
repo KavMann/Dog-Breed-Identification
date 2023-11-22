@@ -8,7 +8,7 @@ import pandas as pd
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 app = Flask(__name__)
 
