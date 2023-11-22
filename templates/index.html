@@ -8,7 +8,7 @@
     <style>
         @mixin glassmorphism() {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             border-left: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
@@ -26,7 +26,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-image: radial-gradient(circle at 30% 86%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 55% 100%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 40% 75%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 7% 99%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 69% 76%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 2% 35%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 14% 48%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 28% 87%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 65% 14%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 51% 36%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 6% 93%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 4%, transparent 4%, transparent 96%), linear-gradient(135deg, rgb(23, 233, 173), rgb(29, 24, 208));
+            background-image: radial-gradient(circle at 30% 86%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 55% 100%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 40% 75%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 7% 99%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 69% 76%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 2% 35%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 14% 48%, rgba(190, 190, 190, 0.03) 0%, rgba(190, 190, 190, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 28% 87%, rgba(188, 143, 143, 0.04) 0%, rgba(188, 143, 143, 0.04) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 65% 14%, rgba(188, 143, 143, 0.04) 0%, rgba(188, 143, 143, 0.04) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 51% 36%, rgba(188, 143, 143, 0.04) 0%, rgba(188, 143, 143, 0.04) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 6% 93%, rgba(188, 143, 143, 0.04) 0%, rgba(188, 143, 143, 0.04) 4%, transparent 4%, transparent 96%), linear-gradient(135deg, #BEBEBE, #FFDAB9, #BC8F8F)
         }
 
         body {
@@ -76,50 +76,14 @@
             box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .form-signin .copyright {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.65);
-        }
-
         .form-signin .form-control {
             background: rgba(255, 255, 255, 0.9);
-        }
-
-        .form-signin .form-check {
-            display: flex;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.65);
-        }
-
-        .form-signin .form-check label {
-            font-size: 0.9em;
-        }
-
-        .form-signin .form-check input {
-            margin-right: 0.5em;
-        }
-
-        .form-signin .form-check input:checked {
-            background-color: #9ce060;
-            border-color: #81c63f;
         }
 
         .form-signin .form-floating {
             &:focus-within {
                 z-index: 2;
             }
-        }
-
-        .form-signin input[type="email"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-
-        .form-signin input[type="password"] {
-            margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
         }
 
         .form-floating {
@@ -133,12 +97,32 @@
             padding-bottom: 1.625rem;
         }
 
-        textarea {
-            resize: vertical;
-            width: 500px;
+        .form-signin input[type="submit"] {
+            background: linear-gradient(-135deg, #555555, #FFA07A, #8B4513);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
-            background-color: #ffffff36;
-            margin-top: 10px !important;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .form-signin input[type="submit"]:hover {
+            background: linear-gradient(-135deg, #8B4513, #FFA07A, #555555);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .breed-details {
+            text-align: justify;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.26);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -146,21 +130,27 @@
     <div class="bg"></div>
     <main class="form-signin glassmorphism">
     <h1 class="h3">Dog Breed Prediction</h1>
-    <img src="{{ url_for('static', filename='Comp_1.gif') }}" alt="GIF Image" style="mix-blend-mode: screen; height: 450px;">
+    <img src="{{ url_for('static', filename='Comp_1.gif') }}" alt="GIF Image" style="mix-blend-mode: exclusion; height: 450px;">
     <form action="/" method="POST" enctype="multipart/form-data">
         <input class="form-control" type="file" name="file" accept="image/*" required>
         <br>
         <input type="submit" value="Predict Breed">
     </form>    
     {% if image_path %}
-        <img src="/{{ image_path }}" alt="Uploaded Image">
+        <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded Image">
         {% if predicted_breed %}
-            <p>Predicted Breed for this Dog is: {{ predicted_breed }}</p>
-            <p>Basic Characteristics: {{ breed_info }}</p>
-            <p>Basic Needs: {{ breed_needs }}</p>
+            <h2>Breed for this Dog is:</h2>
+            <h3>{{ predicted_breed }}</h3>
+        <div class="breed-details">
+            <h3>Basic Characteristics:</h3>
+            <ul>{{ breed_info }}</ul>
+            <h3>Basic Needs:</h3>
+            <ul>{{ breed_needs }}</ul>
+        </div>
         {% else %}
             <p>The submitted image is not identified as a dog.</p>
         {% endif %}
+        
     {% endif %}
 </main>
 
