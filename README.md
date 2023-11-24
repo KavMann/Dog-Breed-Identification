@@ -1,8 +1,52 @@
-# Dog-Breed-Identification Using AI and ML
+# Dog Breed Identification Using AI and ML
+
 This repository contains the source code for a Flask web application that identifies the breed of a dog from an uploaded image using a pre-trained deep learning model. Additionally, the application provides information about the predicted breed, including characteristics and basic needs, retrieved from the OpenAI GPT-3 language model.
 
 ## Link to Dataset & Pre-trained Model
-- https://drive.google.com/drive/folders/1V8V6GcJHaloWTfusTd_c1GKxLswI4Clp?usp=sharing
+- [Google Drive - Dog Breed Identification](https://drive.google.com/drive/folders/1V8V6GcJHaloWTfusTd_c1GKxLswI4Clp?usp=sharing)
+
+## Prerequisites
+- Python 3.x
+- Flask
+- OpenAI API key
+
+## Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+
+3. **Obtain OpenAI API Key**
+    - Visit [OpenAI](https://beta.openai.com/signup/) to sign up for an account if you don't have one.
+    
+    - Once logged in, navigate to your account settings or dashboard to find your API key.
+
+4. **Insert OpenAI API Key**
+    - Open the `app.py` file in the project.
+  
+    - Locate the following line of code:
+     ```python
+     openai.api_key = "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"
+     #Replace the placeholder API key with your actual OpenAI API key
+     openai.api_key = "your-api-key-here"
+     
+5. **Download the Dog Identification Model:**
+    - Download the pre-trained model (dog_identification.h5) from the provided [Google Drive link](https://drive.google.com/drive/folders/1V8V6GcJHaloWTfusTd_c1GKxLswI4Clp?usp=sharing).
+    - Place the downloaded model file in the root directory of the project.
+
+## Run the Application:
+  ```bash
+  python app.py
+  The application will be accessible at http://127.0.0.1:5000/ in your web browser.
+```
+## Usage
+Upload an Image:
+    -Visit the web page and upload an image of a dog.
+
 
 ## Features
 - **Dog Breed Identification:** The application uses a pre-trained deep learning model to predict the breed of a dog based on an uploaded image.
