@@ -13,7 +13,7 @@ This repository contains the source code for a Flask web application that identi
 ## Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone [https://github.com/KavMann/Dog-Breed-Identification.git]
    cd your-repository
 
 2. **Install dependencies:**
